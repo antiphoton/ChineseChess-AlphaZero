@@ -9,6 +9,7 @@ This project is based on these main resources:
 2. The **great** Reversi/Chess/Chinese chess development of the DeepMind ideas that @mokemokechicken/@Akababa/@TDteach did in their repo: https://github.com/mokemokechicken/reversi-alpha-zero, https://github.com/Akababa/Chess-Zero, https://github.com/TDteach/AlphaZero_ChineseChess
 3. A Chinese chess engine with gui: https://github.com/mm12432/MyChess
 
+**Note**: The distributed version is in [distributed](https://github.com/NeymarL/ChineseChess-AlphaZero/tree/distributed) branch.
 
 ## Help to train
 
