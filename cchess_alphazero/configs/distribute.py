@@ -38,8 +38,8 @@ class PlayConfig:
         self.simulation_num_per_move = 800
         self.thinking_loop = 1
         self.logging_thinking = False
-        self.c_puct = 1.5
-        self.noise_eps = 0.15
+        self.c_puct = 5
+        self.noise_eps = 0.2
         self.dirichlet_alpha = 0.2
         self.tau_decay_rate = 0.9
         self.virtual_loss = 3

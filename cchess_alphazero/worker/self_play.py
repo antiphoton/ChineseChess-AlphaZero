@@ -127,8 +127,8 @@ class SelfPlayWorker:
                 logger.debug(f"{turns % 2} (0 = red; 1 = black) has resigned!")
                 value = -1
                 break
-            if self.config.opts.log_move:
-                logger.info(f"Process{self.pid} Playing: {turns % 2}, action: {action}, time: {(end_time - start_time):.1f}s")
+            # if self.config.opts.log_move:
+            #     logger.info(f"Process{self.pid} Playing: {turns % 2}, action: {action}, time: {(end_time - start_time):.1f}s")
             # logger.info(f"Process{self.pid} Playing: {turns % 2}, action: {action}, time: {(end_time - start_time):.1f}s")
             history.append(action)
             # policys.append(policy)
@@ -233,7 +233,7 @@ class SelfPlayWorker:
 
     def upload_play_data(self, path, filename):
         digest = CChessModel.fetch_digest(self.config.resource.model_best_weight_path)
-        data = {'digest': digest, 'username': self.config.internet.username, 'version': '2.3'}
+        data = {'digest': digest, 'username': self.config.internet.username, 'version': '2.4'}
         response = upload_file(self.config.internet.upload_url, path, filename, data, rm=False)
         if response is not None and response['status'] == 0:
             logger.info(f"Upload play data {filename} finished.")
